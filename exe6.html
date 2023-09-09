@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6 - Javascript</title>
+</head>
+<style>    
+body{
+    font-size: 18px;
+}
+button{
+    width: 150px;
+    height: 80px;
+}
+</style>
+<body>
+    <h1>Somando dois números</h1>
+    <button onclick="numero()">Clique aqui!</button>
+    <p id="res">Aqui vai aparecer o seu resultado</p>
+</body>
+<script>
+    function numero() {
+        let numero1 = parseInt(prompt('Digite um número'));
+        let numero2 = parseInt(prompt('Digite outro número'));
+        let soma = numero1 + numero2;
+        document.getElementById('res').innerHTML = `<p>A soma entre <mark>${numero1}</mark> e <mark>${numero1}</mark> é = ${soma}.</p>`; 
+    }
+</script>
+</html>

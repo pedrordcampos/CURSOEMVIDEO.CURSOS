@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12 - Javascript</title>
+</head>
+<style>    
+    @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+    body { font: 12pt Arial; }
+    h1, h2, h3 { font-family: 'Pacifico', cursive; font-weight: normal;}
+    button { font-size: 12pt; padding: 30px; }
+</style>
+
+<body>
+    <h1>É par ou ímpar?</h1>
+    <button onclick="parImpar()">Clique para iniciar</button>
+
+    <section id="result">
+        <p id="res">O resultado vai aparecer aqui.</p>
+    </section>
+       
+</body>
+<script>
+
+let res = document.querySelector('#result');
+
+
+    function parImpar() {  
+        // Variáveis utilizadas no programa 
+        let numero = parseInt(prompt('Digite o número:'));
+        let parImpar = '';
+
+        if(numero % 2 == 0) {
+            parImpar = `<strong style='color:blue';> Par. </strong>`;
+        } else {
+            parImpar = `<strong style='color:red';> Ímpar. </strong>`;
+        } 
+    
+        // Impressão na tela dos valores recebidos. 
+        document.getElementById('res').innerHTML += `<p>O número ${numero} que foi digitado é: ${parImpar} </p>`
+    }
+   
+
+</script>
+</html>

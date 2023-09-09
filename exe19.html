@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 19 - Javascript</title>
+</head>
+<style>    
+    @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+    body { font: 12pt Arial; }
+    h1, h2, h3 { font-family: 'Pacifico', cursive; font-weight: normal; }
+    button { font-size: 12pt; padding: 30px; }
+</style>
+
+<body>
+    <h1>Múltiplas ações</h1>
+    <button onclick="mesDoAno()">Informe o mês aqui</button>
+
+    <section id="result">
+        <p id="res">Descubra as estações do ano</p>
+    </section>
+       
+</body>
+<script>
+
+    function mesDoAno() {  
+  
+        let mes = prompt('Informe o mês do ano');
+
+        if (mes === 'março' || mes === 'abril' || mes === 'maio'){
+            document.getElementById('res').innerHTML += `<p>No mês de <mark>${mes}</mark>, estamos na estação <mark>OUTONO</mark>.</p>`;
+        } else if (mes === 'julho' || mes === 'agosto' || mes === 'setembro') {
+            document.getElementById('res').innerHTML += `<p>No mês de <mark>${mes}</mark>, estamos na estação <mark>INVERNO</mark>.</p>`;
+        } else if (mes === 'outubro' || mes === 'novembro' || mes === 'dezembro') {
+            document.getElementById('res').innerHTML += `<p>No mês de <mark>${mes}</mark>, estamos na estação <mark>PRIMAVERA</mark>.</p>`;
+        } else {
+            document.getElementById('res').innerHTML += `<p>No mês de <mark>${mes}</mark>, estamos na estação <mark>VERÃO</mark>.</p>`;
+        }
+    }   
+
+</script>
+</html>

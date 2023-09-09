@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 16 - Javascript</title>
+</head>
+<style>    
+    @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+    body { font: 12pt Arial; }
+    h1, h2, h3 { font-family: 'Pacifico', cursive; font-weight: normal;}
+    button { font-size: 12pt; padding: 30px; }
+</style>
+
+<body>
+    <h1>Analisando data de hora do Sistema</h1>
+    <button onclick="geradorNumeros()">Clique em mim</button>
+    <button onclick="limpar()">Limpar</button>
+
+    <section id="result">
+        <p id="res">Cada vez que você apertar o botão acima, eu penso em um número entre 1 e 100</p>
+    </section>
+       
+</body>
+<script>
+
+    function geradorNumeros() {  
+        // Variáveis utilizadas no programa 
+        let numero = Math.floor(Math.random() * 100);      
+       
+        // Impressão na tela dos valores recebidos. 
+        document.getElementById('res').innerHTML += `<p>Acabei de pensar no número <mark>${numero}</mark></p>`
+    }   
+
+    function limpar() {
+        document.getElementById('res').innerHTML = null;
+    }
+
+</script>
+</html>

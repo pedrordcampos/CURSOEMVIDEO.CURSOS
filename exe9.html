@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9 - Javascript</title>
+</head>
+<style>    
+    @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+    body { font: 12pt Arial; }
+    h1, h2, h3 { font-family: 'Pacifico', cursive; font-weight: normal;}
+    button { font-size: 12pt; padding: 30px; }
+</style>
+
+<body>
+    <h1>Contador de cliques</h1>
+    <button onclick="contar()">Clique aqui!</button>
+    <button onclick="zerar()">Zerar o contador</button>
+
+    <section id="result">
+        <p id="res">O contador está com <mark>0</mark> cliques.</p>
+    </section>
+       
+</body>
+<script>
+
+let res = document.querySelector('#result');
+let cont = 0;
+
+    function contar() {      
+        cont ++;
+        document.getElementById('res').innerHTML = `<p>O contador está em <mark>${cont}</mark> cliques. </p>`
+    }
+
+    function zerar() {
+        cont = 0;
+        document.getElementById('res').innerHTML = `<p>O contador está em <mark>${cont}</mark> cliques. </p>`
+    }
+</script>
+</html>

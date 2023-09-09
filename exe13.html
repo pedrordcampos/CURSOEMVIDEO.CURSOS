@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 13 - Javascript</title>
+</head>
+<style>    
+    @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+    body { font: 12pt Arial; }
+    h1, h2, h3 { font-family: 'Pacifico', cursive; font-weight: normal;}
+    button { font-size: 12pt; padding: 30px; }
+</style>
+
+<body>
+    <h1>Maior valor</h1>
+    <button onclick="maiorValor()">Clique para iniciar</button>
+
+    <section id="result">
+        <p id="res">O resultado vai aparecer aqui.</p>
+    </section>
+       
+</body>
+<script>
+
+let res = document.querySelector('#result');
+
+
+    function maiorValor() {  
+        // Variáveis utilizadas no programa 
+        let numero1 = parseInt(prompt('Digite o primeiro número:'));
+        let numero2 = parseInt(prompt('Digite o segundo número:'));
+        let maiorValor = '';
+       
+        if(numero1 > numero2) {
+            maiorValor = numero1;
+        } else {
+            maiorValor = numero2;
+        } 
+    
+        // Impressão na tela dos valores recebidos. 
+        document.getElementById('res').innerHTML += `<p>Analisando os valores <mark>${numero1}</mark> e <mark>${numero2}</mark>, o maior valor é <strong>${maiorValor}.</strong></p>`
+    }   
+
+</script>
+</html>

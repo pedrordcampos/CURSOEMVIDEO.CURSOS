@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1 - Javascript</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-weight: bold;
+        color: blanchedalmond;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background-color: aliceblue;
+        border: 3px solid cadetblue;
+        margin: 10px;
+        border-radius: 10px;
+    }
+    p{
+        margin: 10px;
+        font-size: 30px;
+        text-shadow: black 0 -2px;
+    }
+    button{
+        background-color: gray;
+        border-radius: 10px;
+        color: white;
+        font-size: 17px;
+        font-style: italic;
+        text-shadow: black 0 -2px;
+        width: 150px;
+        height: 50px;
+    }
+    .colorida{
+        background-color: cadetblue;
+        padding: 15px;
+    }
+</style>
+<body>
+<div class="colorida">
+    <p id="res">Olá!</p>
+    <button onclick="clicou()">Alterar</button>
+    <button onclick="alerta()">Teste</button>
+</div>
+   
+</body>
+<script>
+    function alerta() {
+        alert('Olá mundo!');
+    }
+    function clicou() {
+        document.getElementById('res').innerText = 'Olá Mundo!';    
+    }
+    </script>
+</html>

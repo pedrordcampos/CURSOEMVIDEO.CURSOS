@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 18 - Javascript</title>
+</head>
+<style>    
+    @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+    body { font: 12pt Arial; }
+    h1, h2, h3 { font-family: 'Pacifico', cursive; font-weight: normal; }
+    button { font-size: 12pt; padding: 30px; }
+</style>
+
+<body>
+    <h1>Múltiplas ações</h1>
+    <button onclick="multiplasAcoes()">Clique para Iniciar</button>
+
+    <section id="result">
+        <p id="res">Clique no botão acima para começar</p>
+    </section>
+       
+</body>
+<script>
+
+    function multiplasAcoes() {  
+  
+        let val1 = parseInt(prompt('Qual o primeiro valor?'));
+        let val2 = parseInt(prompt('Qual o segundo valor?'));
+
+        let operacao = parseInt(prompt(`\nValores informados: ${val1} e ${val2}. \nO que vamos fazer? \n[1] Somar  \n[2] Subtrair \n[3] Multiplicar \n[4] Dividir`));         
+        
+        switch(operacao) {
+            case 1: 
+                document.getElementById('res').innerHTML += `<p>${val1} + ${val2} = <strong>${val1 + val2}</strong></p>`;
+                break;
+            case 2:
+                document.getElementById('res').innerHTML += `<p>${val1} - ${val2}  = <strong>${val1 - val2}</strong></p>`;
+                break;
+            case 3:
+                document.getElementById('res').innerHTML += `<p>${val1} * ${val2}  = <strong>${val1 * val2}</strong></p>`;
+                break;
+            case 4:
+                document.getElementById('res').innerHTML += `<p>${val1} / ${val2}  = <strong>${val1 / val2}</strong></p>`;
+                break;
+            default:
+                document.getElementById('res').innerHTML += `<p>OPÇÃO INVÁLIDA! Você digitou ${val1} e ${val2}, mas não sei o que fazer com eles.</p>`;
+                break;
+        }   
+       
+    }   
+
+</script>
+</html>

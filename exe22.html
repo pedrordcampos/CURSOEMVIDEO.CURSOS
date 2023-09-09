@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 22 - Javascript</title>
+</head>
+<style>    
+    @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+    body { font: 12pt Arial; }
+    h1, h2, h3 { font-family: 'Pacifico', cursive; font-weight: normal; }
+    button { font-size: 12pt; padding: 30px; }
+</style>
+
+<body>
+    <h1>Contando de 1 a 10 (Mostrando só os pares)</h1>
+    <button onclick="contar()">Contar de 1 a 10</button>
+
+    <section id="result">
+        <p id="res">Aperte o botão acima para contar</p>
+    </section>
+       
+</body>
+<script>
+
+    function contar() {   
+
+        res.innerHTML += `<h2>Contando de 1 até 10</h2>`
+
+        for(let cont = 0; cont <= 10; cont +=2) {
+            res.innerHTML += `${cont}&#x1F449;`;
+        }
+
+        res.innerHTML += `&#x1F3C1`;
+        
+    }   
+
+</script>
+</html>
